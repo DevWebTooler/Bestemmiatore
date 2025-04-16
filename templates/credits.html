@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crediti | Generatore di Bestemmie</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <button id="theme-toggle" class="theme-toggle" title="Cambia tema">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <header class="app-header">
+            <h1><i class="fas fa-info-circle"></i> Crediti</h1>
+            <p class="subtitle">Chi ha creato questo generatore</p>
+        </header>
+
+        <main class="main-content">
+            <div class="credits-container">
+                <div class="credits-card">
+                    <div class="creator-section">
+                        <h2><i class="fas fa-code"></i> Sviluppatore</h2>
+                        <div class="creator-info">
+                            <p>Damiano Sensi</p>
+                        </div>
+                    </div>
+                    <div class="inspiration-section">
+                        <h2><i class="fas fa-lightbulb"></i> Ideatore</h2>
+                        <div class="creator-info">
+                            <p>Filippo De Santis</p>
+                        </div>
+                    </div>
+                    <div class="version-info">
+                        <p>Versione 1.0.0</p>
+                        <p>© 2025 Tutti i diritti riservati</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <div class="footer-links">
+                <button class="link-button">
+                    <a href="{{ url_for('index') }}"><i class="fas fa-arrow-left"></i> Torna al generatore</a>
+                </button>
+                <button class="link-button">
+                    <a href="{{ url_for('why_this') }}"><i class="fas fa-question-circle"></i> Perché?</a>
+                </button>
+            </div>
+        </footer>
+
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Generatore di bestemmie - Un generatore automatico di imprecazioni creative">
+        <meta name="theme-color" content="#4CAF50">
+        <title>Generatore di bestemmie</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <button id="theme-toggle" class="theme-toggle" title="Cambia tema">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <header class="app-header"></header>
+            <h1><i class="fas fa-fire"></i> Generatore di Bestemmie</h1>
+            <p class="subtitle">Genera imprecazioni creative in un click</p>
+        </header>
+
+        <main class="main-content">
+            <div class="generator-section">
+                <button id="generate-button" class="generate-button">
+                    <i class="fas fa-magic"></i> Genera bestemmia
+                </button>
+                
+                <div class="stats">
+                    <span id="generation-counter">Generazioni: 0</span>
+                </div>
+            </div>
+
+            <div id="result-container" class="result-container hidden">
+                <h2>La tua bestemmia:</h2>
+                <div class="result-box">
+                    <p id="result-text"></p>
+                    <div class="button-group">
+                        <button id="copy-button" class="copy-button" title="Copia negli appunti">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                        <button id="share-button" class="copy-button" title="Condividi">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="share-menu" class="share-menu">
+                    <button class="share-button" data-platform="whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </button>
+                    <button class="share-button" data-platform="telegram">
+                        <i class="fab fa-telegram"></i> Telegram
+                    </button>
+                    <button class="share-button" data-platform="twitter">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </button>
+                </div>
+                <div class="feedback">
+                    <button class="feedback-button like">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                    <button class="feedback-button dislike">
+                        <i class="fas fa-thumbs-down"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <div class="footer-links">
+                <button class="link-button">
+                    <a href="{{ url_for('credits') }}"><i class="fas fa-info-circle"></i> Crediti</a>
+                </button>
+                <button class="link-button">
+                    <a href="{{ url_for('why_this') }}"><i class="fas fa-question-circle"></i> Perché?</a>
+                </button>
+            </div>
+            <p class="copyright">© 2025 Generatore di Bestemmie - Tutti i diritti riservati</p>
+        </footer>
+
+        <div id="notification" class="notification hidden">
+            <i class="fas fa-check"></i> Copiato negli appunti!
+        </div>
+
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </body>
+</html>

@@ -41,7 +41,11 @@ azioni = [
     # Insulti comportamentali
     "ladro", "bugiardo", "imbroglione", "parassita", "sanguisuga", "profittatore",
     "approfittatore", "opportunista", "scroccone", "fannullone", "perdigiorno"
-]
+    # Insulti vegetali
+    "erbaccia", "rovo", "cactus", "fungo", "muschio", "felce", "carciofo",
+    "cavolo", "broccolo", "radice", "fungo velenoso", "erba cattiva",
+    "finocchio", "carota", "cipolla", "aglio", "peperone", "zucchina",
+]    
 
 aggettivi_opzionali = [
     # Aggettivi negativi
@@ -81,7 +85,7 @@ def generate():
 
 @app.route('/why-this')
 def why_this():
-    return render_template('why-this?.html')
+    return render_template('why-this.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
